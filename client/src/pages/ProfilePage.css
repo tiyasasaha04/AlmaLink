@@ -1,0 +1,159 @@
+.profile-container {
+  max-width: 1100px;
+  margin: 2rem auto;
+}
+
+/* --- Profile Header --- */
+.profile-header {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.profile-cover {
+  height: 200px;
+  background-color: var(--color-primary);
+  background-image: linear-gradient(to right, var(--color-primary), #004182);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.header-content {
+  padding: 1.5rem 2rem;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-top: -90px; /* Pulls avatar up onto cover */
+  background: #fff;
+}
+
+.header-info {
+  flex: 1;
+  margin-left: 1.5rem;
+}
+
+.header-info h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.header-info .header-headline {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 4px 0;
+}
+
+.header-info .header-location {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
+
+.header-actions {
+  align-self: flex-start; /* Aligns to top of its flex container */
+}
+
+.profile-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.profile-btn.primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+.profile-btn.primary:hover {
+  background: var(--color-primary-dark);
+}
+
+/* --- Profile Body --- */
+.profile-body-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.profile-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.profile-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.profile-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.75rem;
+}
+
+/* --- Tags --- */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tag {
+  background: var(--color-secondary);
+  color: var(--color-text-secondary);
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* --- Experience List --- */
+.experience-list {
+  list-style: none;
+}
+.experience-item {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 1rem 0;
+}
+.experience-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.experience-item h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+.experience-item p {
+  font-size: 1rem;
+  margin: 4px 0;
+}
+
+/* --- Glance List --- */
+.glance-list {
+  list-style: none;
+}
+.glance-list li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}

@@ -1,0 +1,66 @@
+.admin-dashboard {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.admin-dashboard h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.admin-error {
+  color: #c00;
+  background: #fde8e8;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.admin-table th {
+  background-color: var(--color-secondary);
+}
+
+.admin-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.admin-btn {
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #fff;
+  transition: var(--transition-smooth);
+}
+
+.admin-btn.approve {
+  background-color: #28a745;
+}
+.admin-btn.approve:hover {
+  background-color: #218838;
+}
+
+.admin-btn.reject {
+  background-color: #dc3545;
+}
+.admin-btn.reject:hover {
+  background-color: #c82333;
+}

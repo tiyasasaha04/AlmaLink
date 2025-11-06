@@ -1,0 +1,74 @@
+/* Import a professional font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* CSS Variables for easy themeing */
+:root {
+  --color-primary: #0a66c2; /* A "LinkedIn" blue */
+  --color-primary-dark: #004182;
+  --color-secondary: #f3f2ef;
+  --color-text: #1c1c1c;
+  --color-text-secondary: #5e5e5e;
+  --border-radius: 8px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Global Reset & Font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Your Advanced CSS Requirements --- */
+
+/* 1. Transitions */
+a,
+button {
+  transition: var(--transition-smooth);
+}
+
+/* 2. Transforms (Example for cards) */
+.profile-card, .job-card {
+  transition: var(--transition-smooth);
+}
+
+.profile-card:hover, .job-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* 3. Fade-in on Scroll (We'll add a class with JS/Intersection Observer) */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 4. Glassmorphism (Example for a modal or nav) */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* 5. Preloader (Placeholder) */
+.preloader {
+  /* Full-screen preloader styles would go here */
+  /* We will implement this with the main App.js */
+}

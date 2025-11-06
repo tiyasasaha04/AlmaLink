@@ -1,0 +1,88 @@
+/* --- CreatePost.js --- */
+.create-post-card {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+.create-post-card textarea {
+  width: 100%;
+  min-height: 80px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  resize: vertical;
+}
+.create-post-card button {
+  display: block;
+  margin-left: auto;
+  margin-top: 0.75rem;
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+/* --- PostFeed.js & PostItem.js --- */
+.post-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.post-card {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.post-author {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+.post-author img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.post-author h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.post-author a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+.post-author p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+.post-content {
+  padding: 0 1.5rem 1rem;
+}
+.post-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-top: 1px solid #f0f0f0;
+}
+.post-actions button {
+  background: #f0f0f0;
+  border: none;
+  border-radius: 16px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+.post-actions button.liked {
+  background: var(--color-primary);
+  color: #fff;
+}

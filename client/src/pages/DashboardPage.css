@@ -1,0 +1,26 @@
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    grid-template-columns: 2fr 1fr;
+  }
+  .dashboard-left {
+    display: none; /* Hide mini profile on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    grid-template-columns: 1fr; /* Stack columns */
+  }
+  .dashboard-right {
+    grid-row: 1; /* Move widgets to top */
+  }
+}
