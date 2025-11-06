@@ -4,5 +4,5 @@ import { API } from './authService'; // Re-use the axios instance from authServi
 // export const API = axios.create(...)
 
 export const getPendingUsers = () => API.get('/users/pending');
-export const approveUser = (id) = > API.put(`/users/approve/${id}`);
+export const approveUser = (id) => API.put(`/users/approve/${id}`);
 export const rejectUser = (id) => API.put(`/users/reject/${id}`);

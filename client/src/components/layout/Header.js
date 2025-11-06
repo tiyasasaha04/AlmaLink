@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useAuth } from '../../context/AuthContext'; // Corrected import path
+import { useAuth } from '../../hooks/useAuth'; // Corrected import path
 import './Header.css';
 
 const Header = () => {
@@ -36,10 +36,14 @@ const Header = () => {
           </ul>
         </nav>
       </div>
+      
+      {/* --- CORRECTED AUTH SECTION --- */}
       <div className="header-auth">
         {user ? (
           <>
-            <Link to="/profile/me">Profile</Link>
+            <Link to="/profile/me">My Profile</Link>
+            <span style={{margin: '0 8px'}}>|</span>
+            <Link to="/profile/me/edit">Edit Profile</Link>
             <button onClick={logout} className="logout-btn">Logout</button>
           </>
         ) : (
@@ -49,20 +53,5 @@ const Header = () => {
     </header>
   );
 };
-
-// ...
-      <div className="header-auth">
-        {user ? (
-          <>
-            <Link to="/profile/me">My Profile</Link>
-            <span style={{margin: '0 8px'}}>|</span>
-            <Link to="/profile/me/edit">Edit Profile</Link> {/* <-- ADD THIS */}
-            <button onClick={logout} className="logout-btn">Logout</button>
-          </>
-        ) : (
-          <Link to="/login">Login</Link>
-        )}
-      </div>
-// ...
 
 export default Header;

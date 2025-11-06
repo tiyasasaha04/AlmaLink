@@ -8,5 +8,4 @@ const { handleChatQuery } = require('../../controllers/chatbotController')
 // @access  Private
 router.post('/query', authMiddleware, handleChatQuery);
 
-module.Eports = router; // Typo in original, correcting
 module.exports = router;
