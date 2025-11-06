@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react'; // <-- Import useState
 import { Link } from 'react-router-dom';
 import { likePost } from '../../services/postService';
-import { useAuth } from '../../hooks/useAuth';
+import useAuth from '../../hooks/useAuth'; // <-- FIX: Removed {} braces
 import './Feed.css';
 
 const PostItem = ({ post }) => {

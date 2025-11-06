@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getMyProfile, updateMyProfile } from '../services/profileService';
-import { useAuth } from '../hooks/useAuth';
+import useAuth from '../hooks/useAuth'; // <-- FIX: Removed {} braces
 import Spinner from '../components/common/Spinner';
 import './EditProfile.css'; // Add styles below
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAuth } from '../hooks/useAuth';
+import useAuth from '../hooks/useAuth'; // <-- FIX: Removed {} braces
 import CreatePost from '../components/feed/CreatePost';
 import PostFeed from '../components/feed/PostFeed';
 import OpportunitiesWidget from '../components/jobs/OpportunitiesWidget';

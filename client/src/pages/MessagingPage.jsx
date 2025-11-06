@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { getMyConversations } from '../services/chatService';
-import { useAuth } from '../hooks/useAuth';
+import useAuth from '../hooks/useAuth'; // <-- FIX: Removed {} braces
 import ConversationList from '../components/chat/ConversationList';
 import ChatWindow from '../components/chat/ChatWindow';
 import Spinner from '../components/common/Spinner';

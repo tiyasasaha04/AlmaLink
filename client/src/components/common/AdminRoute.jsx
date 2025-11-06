@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
-import { useAuth } from '../../hooks/useAuth';
+import useAuth from '../../hooks/useAuth'; // <-- FIX: Removed {} braces
 import Spinner from './Spinner'; // We'll need a loading spinner
 
 const AdminRoute = () => {

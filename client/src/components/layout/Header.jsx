@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useAuth } from '../../hooks/useAuth'; // Corrected import path
+import useAuth from '../../hooks/useAuth'; // <-- FIX: Removed {} braces
 import './Header.css';
 
 const Header = () => {
