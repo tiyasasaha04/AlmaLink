@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom'; // Import useNavigate
-import { useAuth } from '../context/AuthContext'; // Corrected useAuth path
+import useAuth from '../hooks/useAuth; // Corrected useAuth path
 import { getAlumniProfile } from '../services/directoryService';
 import { getMyProfile } from '../services/profileService';
 import { startConversation } from '../services/chatService'; // Import chat service
