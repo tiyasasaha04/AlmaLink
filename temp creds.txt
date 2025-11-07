@@ -1,0 +1,6 @@
+Almalink pwd 
+
+You can log in with:
+Admin: admin@almalink.com
+Users: priya@almalink.com, rohan@almalink.com, etc.
+Password for all: password123
