@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
+// import { useNavigate } from 'react-router-dom'; // <-- REMOVE THIS
 import { login as loginService, getMyProfile } from '../services/authService';
-import { useNavigate } from 'react-router-dom';
 import { API } from '../services/authService'; // Import API
 
 const AuthContext = createContext();
@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem('token'));
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
+  // const navigate = useNavigate(); // <-- REMOVE THIS
 
   const loadUser = async () => {
     if (localStorage.token) {
@@ -29,14 +29,16 @@ export const AuthProvider = ({ children }) => {
       setUser(data);
     } catch (err) {
       console.error('Failed to load user');
-      logout(); // Token is invalid or expired
+      // Call logout() but without navigate
+      setToken(null);
+      setUser(null);
+      localStorage.removeItem('token');
+      setAuthToken(null); // Remove token from headers
     }
     setLoading(false);
   };
   
   useEffect(() => {
-    // We call loadUser directly. 
-    // The 'token' in state isn't what matters, the one in localStorage is.
     loadUser();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // Load user on initial app load
@@ -48,11 +50,11 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem('token', data.token);
       setAuthToken(data.token); // Set token in headers
       await loadUser(); // Fetch user data after login
-      navigate('/dashboard');
+      // navigate('/dashboard'); // <-- REMOVE THIS
       return { success: true };
     } catch (error) {
       console.error('Login failed:', error.response?.data?.msg);
-      return { success: false, message: error.response?.data?.msg };
+      return { success: false, message: error.response?.data?.msg || 'Invalid credentials' }; // Ensure message is returned
     }
   };
 
@@ -61,7 +63,7 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
     localStorage.removeItem('token');
     setAuthToken(null); // Remove token from headers
-    navigate('/login');
+    // navigate('/login'); // <-- REMOVE THIS
   };
 
   return (

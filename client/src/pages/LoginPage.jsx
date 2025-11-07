@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import './AuthForm.css'; // Re-using the same style
 
@@ -11,6 +11,7 @@ const LoginPage = () => {
   const [error, setError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const { login } = useAuth();
+  const navigate = useNavigate(); // <-- Add this
 
   const { email, password } = formData;
 
@@ -23,8 +24,10 @@ const LoginPage = () => {
     const result = await login(email, password);
     if (!result.success) {
       setError(result.message);
+    } else {
+      // Success! Handle redirect here
+      navigate('/dashboard'); 
     }
-    // Success handling (redirect) is done inside AuthContext
   };
 
   return (

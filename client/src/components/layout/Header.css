@@ -1,0 +1,71 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.header-nav nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0; /* Add margin 0 */
+  padding: 0; /* Add padding 0 */
+}
+
+.header-nav nav a {
+  text-decoration: none;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  padding: 0.5rem; /* Add some padding */
+}
+
+.header-nav nav a:hover,
+.header-nav nav a.active {
+  color: var(--color-primary);
+}
+
+.header-auth {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header-auth a {
+  text-decoration: none;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.header-auth a:hover {
+  color: var(--color-primary);
+}
+
+.logout-btn {
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 24px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.logout-btn:hover {
+  background: var(--color-primary-dark);
+}
